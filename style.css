@@ -30,6 +30,22 @@ body {
   border-left: 2px solid #ffddee;
 }
 
+.botoes-direita {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000; /* Para garantir que fique por cima */
+}
+
+.botoes-direita button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
 input[type="text"] {
   padding: 8px;
   border-radius: 10px;
