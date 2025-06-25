@@ -58,3 +58,49 @@ function renderList() {
 function salvarLista() {
   localStorage.setItem('listaCompras', JSON.stringify(lista));
 }
+
+// --- Novo sistema de múltiplas listas --- //
+const savedListsMenu = document.getElementById("savedLists"); // precisa ter esse <ul> no HTML
+
+function createNewList() {
+  if (lista.length > 0 && confirm("Deseja salvar a lista atual antes de criar uma nova?")) {
+    saveCurrentList();
+  }
+  lista = [];
+  salvarLista();
+  renderList();
+}
+
+function saveCurrentList() {
+  if (lista.length === 0) return alert("A lista está vazia.");
+  const name = prompt("Digite um nome para essa lista:");
+  if (name) {
+    localStorage.setItem(name, JSON.stringify(lista));
+    carregarMenuListas();
+    alert(`Lista "${name}" salva com sucesso!`);
+  }
+}
+
+function carregarMenuListas() {
+  if (!savedListsMenu) return; // Se o menu não existe no HTML, pula
+  savedListsMenu.innerHTML = "";
+  for (let i = 0; i < localStorage.length; i++) {
+    const chave = localStorage.key(i);
+    if (chave !== "listaCompras") { // ignora a lista padrão
+      const li = document.createElement("li");
+      li.textContent = chave;
+      li.style.cursor = "pointer";
+      li.onclick = () => {
+        const listaSalva = JSON.parse(localStorage.getItem(chave));
+        lista = listaSalva;
+        salvarLista();
+        renderList();
+      };
+      savedListsMenu.appendChild(li);
+    }
+  }
+}
+
+// Chama quando o site abrir
+window.onload = carregarMenuListas;
+
