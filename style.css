@@ -39,17 +39,16 @@ body {
     padding: 8px;
     border-bottom: 1px solid #ddd;
   }
-
+  
+  li.comprado {
+    text-decoration: line-through;
+    color: rgb(152, 255, 143);
+  }
+  
   button.remove {
-    background: red;
+    background: rgb(255, 94, 0);
     color: white;
     border: none;
     cursor: pointer;  
     padding: 4px 8px;
 }
-
-  li.comprado {
-    text-decoration: line-through;
-    color: gray;
-  }
-  
