@@ -15,6 +15,15 @@ body {
     width: 500px; /* Aumentado aqui */
     min-height: 400px; /* Altura mínima para o quadrado parecer maior */
   }
+
+.menu {
+  background-color: #ffeef8;
+  padding: 15px;
+  border-radius: 20px;
+  width: 200px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
   
   #itemInput {
     padding: 10px;
