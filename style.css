@@ -16,13 +16,44 @@ body {
     min-height: 400px; /* Altura mínima para o quadrado parecer maior */
   }
 
-.menu {
+
+.menu-esquerda, .menu-direita {
   background-color: #ffeef8;
   padding: 15px;
-  border-radius: 20px;
-  width: 200px;
-  height: fit-content;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 220px;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.menu-direita {
+  background-color: #fff;
+  border-left: 2px solid #ffddee;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+button {
+  padding: 8px;
+  background-color: #ffddee;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ffc1e3;
+}
+
 }
   
   #itemInput {
