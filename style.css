@@ -89,3 +89,58 @@ button:hover {
     cursor: pointer;  
     padding: 4px 8px;
 }
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px;
+}
+
+.listas-salvas {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  width: 200px;
+  min-height: 150px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.listas-salvas h3 {
+  margin-top: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.listas-salvas ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.listas-salvas ul li {
+  padding: 6px 8px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.listas-salvas ul li:hover {
+  background-color: #f9f9f9;
+}
+
+.listas-salvas button {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 8px;
+  font-size: 14px;
+  background-color: #ffddee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.listas-salvas button:hover {
+  background-color: #ffc1e3;
+}
