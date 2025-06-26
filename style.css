@@ -17,34 +17,64 @@ body {
   }
 
 
-.menu-esquerda, .menu-direita {
-  /* ou use rgba(255, 255, 255, 0.6) para branco translúcido */
-  backdrop-filter: blur(10px); /* efeito vidro */
-  -webkit-backdrop-filter: blur(10px); /* suporte Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
-.menu-direita {
-  background-color: #fff;
-  border-left: 2px solid #ffddee;
-}
-
-.botoes-direita {
+.painel-direito {
   position: fixed;
   top: 20px;
   right: 20px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.botoes-direita {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  z-index: 1000; /* Para garantir que fique por cima */
 }
 
 .botoes-direita button {
   padding: 6px 10px;
   font-size: 14px;
   border-radius: 8px;
+  background-color: #ffddee;
+  border: none;
+  cursor: pointer;
 }
+
+.listas-salvas {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 180px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.listas-salvas h3 {
+  margin-top: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.listas-salvas ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.listas-salvas ul li {
+  padding: 4px 6px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.listas-salvas ul li:hover {
+  background-color: #f8f8f8;
+}
+
+
+
 
 input[type="text"] {
   padding: 8px;
