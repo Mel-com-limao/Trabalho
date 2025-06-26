@@ -1,3 +1,8 @@
+window.onload = () => {
+  alert("Trabalho feito por Melissa e Isabela! ");
+  carregarMenuListas();
+};
+
 const itemInput = document.getElementById('itemInput');
 const addBtn = document.getElementById('addBtn');
 const itemList = document.getElementById('itemList');
